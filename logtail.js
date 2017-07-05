@@ -1,13 +1,16 @@
 /* Copyright (c) 2012: Daniel Richman. License: GNU GPL 3 */
 /* Additional features: Priyesh Patel                     */
 
+
 (function () {
+
+/* desume logfile from url argument, like: http://127.0.0.1/?mylogfile.log */
+var url = 'log/' + window.location.href.split('?')[2-1]
 
 var dataelem = "#data";
 var pausetoggle = "#pause";
 var scrollelems = ["html", "body"];
 
-var url = "log";
 var fix_rn = true;
 var load = 30 * 1024; /* 30KB */
 var poll = 1000; /* 1s */
